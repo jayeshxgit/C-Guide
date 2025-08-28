@@ -76,7 +76,8 @@ int a=1; // this sets the value a, then it compounds inside the loop
     }
         cout<<endl;
 }
-// 1,0 alternate pyramid.
+// 1,0 alternate pyramid. 
+// My method.
 int n;
 cin>>n;
  for (int i=1;i<=n;i++){ 
