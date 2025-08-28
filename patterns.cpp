@@ -41,7 +41,7 @@ cin>>n;
         cout<<endl;
 }
 // odd triangle.
-
+// External variable method.
 int n;
 cin>>n;
  for (int i=1;i<=n;i++){ // i is telling the number of rows
@@ -53,7 +53,7 @@ cin>>n;
         cout<<endl;
 }
 // method 2(best method)
-
+// Iteration manipulation Method.
 int n;
 cin>>n;
  for (int i=1;i<=n;i++){ 
