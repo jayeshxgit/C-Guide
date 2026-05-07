@@ -167,8 +167,7 @@ using namespace std;
 
     int rows, cols;
     cin >> rows >> cols; // Input number of rows and columns
-
-    for (int i = 1; i <= rows; i++) {
+ for (int i = 1; i <= rows; i++) {
         for (int j = 1; j <= cols; j++) {
             // Print star at borders (first row, last row, first col, last col)
             if (i == 1 || i == rows || j == 1 || j == cols) {
@@ -234,7 +233,7 @@ public:
 #include <iostream>
 using namespace std;
 
-int main() {
+
     int n = 5;
     int size = 2 * n - 1;
 
@@ -250,4 +249,3 @@ int main() {
 }
 
   
-}

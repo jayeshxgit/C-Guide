@@ -59,9 +59,9 @@ int main(){
         // run the loop first to find max element mx then.
         int smx= INT16_MIN;
         for (int i=0; i<=n; i++){
-            if (arr[i]!=mx) smx= max(smax,arr[i]) // this is the logic, dry run and understand it very well.
+            if (arr[i]!=mx) smx= max(smx,arr[i]) ;// this is the logic, dry run and understand it very well.
         }
-
+        cout<<smx;
     // Advance questions.
     // reverse the array
         int arr[] = {10,3,4,5,6,13};
@@ -69,7 +69,7 @@ int main(){
         int b[n];
          for (int i=0; i<=n; i++){
             int j= n-1-i; // last element of array goes in first place of second array.
-            b[i] = a[j];
+            b[i] = arr[j];
          }
          for (int i=0; i<=n; i++){
             cout<<b[i]<<" ";
@@ -95,7 +95,7 @@ int main(){
           int array[2][3];
           array[0][0] = 6;
           array[0][1] = 1;
-          array[0][1] = 2;
+          array[0][2] = 2;
           array[1][0] = 3;
           array[1][1] = 4;
           array[1][2] = 5;

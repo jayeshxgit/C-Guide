@@ -81,7 +81,7 @@ cout<<x<<" "<<y<<endl;
 // y=t;
 
 // pass by value and pass by reference.
-// this will not swap it because int x,y in void are different from main function. so swapping does happen in void function but when you cout it, the x and y are of main function not void function.
+// this will not swap it because int x,y in void are different from main function. so swapping does happen in void function but when you cout it, the x and y are of main function are not void function.
 
 // pass by reference- to eliminate this put int &x, int &y(now this int x and y are same of main function and when you print it swapping takes place.)
 void swap(int x,int y ){

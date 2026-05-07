@@ -124,7 +124,7 @@ public:
     #include <iostream>
 using namespace std;
 
-class Rectangle {
+class Rectangle { // good way of writing code.
 private:
     double length;
     double width;

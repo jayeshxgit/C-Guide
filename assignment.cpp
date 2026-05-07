@@ -1,0 +1,1 @@
+// kalka dubey teri maa ka bhosda dalle gaand phaad dunga teri 

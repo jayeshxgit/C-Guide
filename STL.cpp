@@ -3,20 +3,28 @@ using namespace std; // this is the library that is letting us access the tools 
                      // if not mentioned then write std:: and then use the function.
 int main(){
 // PAIRS.
-    pair<int,int> x ={2,3}; // this lets us store more than one values in a single variable.
+    pair<int,int> x ={2,3}; // this lets us store exactly two values in a single variable.
     // x=make_pair(2,3) also does the same thing.
     cout<<x.first<<" "<<x.second;
     // another example.
     pair<pair<int,int>,int> m={{3,4},2};
     cout<<m.first.second; // this prints 4 
 
-// VECTORS.
+    // we can store different data types inside the pair.
+// VECTORS. 
+
+vector<int> nums;
+for(int i = 0; i < n; i++){
+    int x; cin >> x;
+    nums.push_back(x);
+}
+
 vector<int> vec;
 vec.push_back(1);
 vec.push_back(2);
 vec.push_back(0); // vec.emplace_back(0); other way to write it.
 
-for(int i=0; i<vec.size(); i++){
+for(int i=0; i<vec.size(); i++){ // they store the data in 0 based indexing.
     cout<<vec[i]<<" ";
 }
 cout<<endl;
@@ -112,6 +120,11 @@ for(auto i: vect){
  }
 // SET
 // stores only unique elements and in ascending order.
+
+vector<int> v = {4, 2, 4, 1, 2, 3};
+set<int> s(v.begin(), v.end());
+for (auto x : s) cout << x << " ";    // Output: 1 2 3 4
+
 set<int> s;
 s.insert(1);
 s.insert(2);
@@ -124,16 +137,22 @@ auto i = s.find(2); // if find() never finds 2 then it will give the element aft
 if (i != s.end()) {
     cout<<*i;
 }
-// also to check if an element is there use count(), if it is there then 1 otherwise 0.
+cout<<s.count(3);  // also to check if an element is there use count(), if it is there then 1 otherwise 0.
 // to erase a certain element.
-auto i1 = s.begin(); // will go to 2
-i++;
-auto i2 = s.end(); // will go to 4
-i--;
-s.erase(i1,i2); // erase from 2-4
-for(auto i: s){
-    cout<<i<<" ";
+
+auto i1 = s.begin();  // points to 1
+i1++;                 // now points to 2
+
+auto i2 = s.end();    // points to AFTER last element
+i2--;                 // now points to 5
+i2--;                 // now points to 4
+
+s.erase(i1, i2);      // erase range [i1, i2)
+
+for (auto i : s) {
+    cout << i << " ";
 }
+
 // lower_bound
 auto i = s.lower_bound(3);
 // returns the value that points to an element that is >= number inside the method.
@@ -158,7 +177,7 @@ for(auto i: ms){
 // erase will delete all the elemens.
 // find will find the element and if there are similar ones it will find the first occuring one.
 // all the function are same from set.
-auto i = ms.erase(ms.find(3)); // try to think what will be deleted here.
+auto i = ms.erase(ms.find(3)); // try to think what will be deleted here. answer= 1,2,0,3
 for(auto i: ms){
     cout<<i<<" ";
 }
@@ -167,7 +186,7 @@ for(auto i: ms){
 // stores unique elements in unordered fashion.
 // methods are same except ub and lb don't apply here
 
-// MAPS.
+// MAPS. like dictionaries in python.
 map<int, string> mp;
 mp[1] = "ab";
 mp[2] = "cd";
@@ -175,14 +194,25 @@ mp[3] = "ef";
 mp[4] = "gh";
 mp.insert({5, "ij"});
 for(auto i: mp){ // here i act as the copy of the data element so no * but in traditional for loop method we use *.
-    cout<<i.first<<" "<<i.second<<endl;
+    cout<<i.first<<"=>"<<i.second<<endl;
 }
-auto i = mp.find(2); // this will find an iterator of this position for fast access thus it returns a pointer liike object.
-cout<< (*i).first<<" "<<(*i).second<<endl;
+auto i = mp.find(2); // this will find an iterator of this position for fast access thus it returns a pointer like object.
+cout<<(*i).first<<" "<<(*i).second<<endl;
  // ub and lb are also valid here.
 
 // UNORDERED MAP.
 // same concept like unordered set.
+
+// BUILT-IN Functions
+
+
+
+
+
+
+
+
+
 }
 
 
