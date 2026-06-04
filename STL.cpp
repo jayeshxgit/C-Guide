@@ -14,8 +14,9 @@ int main(){
 // VECTORS. 
 
 vector<int> nums;
-for(int i = 0; i < n; i++){
-    int x; cin >> x;
+for(int i = 0; i < nums.size(); i++){
+    int x; 
+    cin >> x;
     nums.push_back(x);
 }
 
@@ -36,7 +37,7 @@ auto enditr = vec.end(); // it points to the memory location after the last elem
 // vector<int>::iterator is little lengthy thus we use 'auto' instead of this.
 // it automatically tells the type of iterator which in this case is int.
 
-for(auto i=beginitr; i<enditr; i++){ // since vec.end points to location after the last element we are going till <enditr and not<= enditr (if enditr = enditr-1 then go with <=)
+for(auto i=beginitr; i<enditr; i++){ // since vec.end points to location after the last element we are going till <enditr and not<= enditr (if enditr => enditr-1 then go with <=)
     cout<<*i<<" ";
 }
 
@@ -123,7 +124,7 @@ for(auto i: vect){
 
 vector<int> v = {4, 2, 4, 1, 2, 3};
 set<int> s(v.begin(), v.end());
-for (auto x : s) cout << x << " ";    // Output: 1 2 3 4
+for (auto i : s) cout << i << " ";    // Output: 1 2 3 4
 
 set<int> s;
 s.insert(1);
@@ -187,6 +188,8 @@ for(auto i: ms){
 // methods are same except ub and lb don't apply here
 
 // MAPS. like dictionaries in python.
+
+    // IT sorts the data in ascending order of keys and stores the data in key value pairs.
 map<int, string> mp;
 mp[1] = "ab";
 mp[2] = "cd";
@@ -196,8 +199,16 @@ mp.insert({5, "ij"});
 for(auto i: mp){ // here i act as the copy of the data element so no * but in traditional for loop method we use *.
     cout<<i.first<<"=>"<<i.second<<endl;
 }
+cout<<mp[3]<<endl; // prints ef
 auto i = mp.find(2); // this will find an iterator of this position for fast access thus it returns a pointer like object.
-cout<<(*i).first<<" "<<(*i).second<<endl;
+cout<<i->first<<" "<<i->second<<endl;
+
+if(mp.find(6) == mp.end()){ // use this instead of mp[x] because if we use mp[x] and x is not there then it will create a new key with value 0. thus we use find() to check if the element is there or not.
+    cout<<"not found";
+}
+else{
+    cout<<"found";
+}
  // ub and lb are also valid here.
 
 // UNORDERED MAP.
